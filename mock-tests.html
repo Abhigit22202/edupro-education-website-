@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Tests - EduPro Academy</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">EduPro Academy</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="courses.html" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span>Courses</span>
+                    </a>
+                    <a href="mock-tests.html" class="nav-link active">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                        <span>Mock Tests</span>
+                    </a>
+                    <a href="contact.html" class="nav-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="header-cta">
+                    <button class="btn-primary" onclick="openSignInModal()">Sign In</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                    <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="mobileNav">
+                <a href="index.html" class="nav-link-mobile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="courses.html" class="nav-link-mobile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span>Courses</span>
+                </a>
+                <a href="mock-tests.html" class="nav-link-mobile active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                    <span>Mock Tests</span>
+                </a>
+                <a href="contact.html" class="nav-link-mobile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>Contact</span>
+                </a>
+                <button class="btn-primary mobile-cta" onclick="openSignInModal()">Sign In</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="min-height: 60vh;">
+            <div class="hero-background">
+                <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(139, 92, 246, 0.9));"></div>
+            </div>
+            
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+                        <div style="padding: 1rem; background: rgba(255, 255, 255, 0.2); border-radius: 50%;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h1 class="hero-title" style="font-size: 3rem;">
+                        Mock Test Center
+                    </h1>
+                    <p class="hero-description">
+                        Practice with real exam patterns, get instant results, and track your performance 
+                        with our comprehensive mock test platform designed by experts.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section style="padding: 5rem 0 6rem 0; background-color: white;">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2rem; font-weight: 700; color: #1f2937; margin-bottom: 3rem;">Browse by Category</h2>
+                <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem;">
+                    <div style="text-align: center; padding: 1.25rem 1rem; background-color: #f9fafb; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'">
+                        <div style="display: inline-block; padding: 0.5rem 1rem; background-color: #dbeafe; color: #1e40af; font-size: 0.9rem; font-weight: 600; border-radius: 9999px; margin-bottom: 0.75rem;">45 Tests</div>
+                        <p style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin: 0;">JEE Main/Advanced</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.25rem 1rem; background-color: #f9fafb; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'">
+                        <div style="display: inline-block; padding: 0.5rem 1rem; background-color: #dcfce7; color: #166534; font-size: 0.9rem; font-weight: 600; border-radius: 9999px; margin-bottom: 0.75rem;">38 Tests</div>
+                        <p style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin: 0;">NEET</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.25rem 1rem; background-color: #f9fafb; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'">
+                        <div style="display: inline-block; padding: 0.5rem 1rem; background-color: #fed7aa; color: #9a3412; font-size: 0.9rem; font-weight: 600; border-radius: 9999px; margin-bottom: 0.75rem;">22 Tests</div>
+                        <p style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin: 0;">CA Foundation</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.25rem 1rem; background-color: #f9fafb; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'">
+                        <div style="display: inline-block; padding: 0.5rem 1rem; background-color: #e9d5ff; color: #6b21a8; font-size: 0.9rem; font-weight: 600; border-radius: 9999px; margin-bottom: 0.75rem;">28 Tests</div>
+                        <p style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin: 0;">GATE</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.25rem 1rem; background-color: #f9fafb; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'">
+                        <div style="display: inline-block; padding: 0.5rem 1rem; background-color: #fce7f3; color: #be185d; font-size: 0.9rem; font-weight: 600; border-radius: 9999px; margin-bottom: 0.75rem;">35 Tests</div>
+                        <p style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin: 0;">Banking</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.25rem 1rem; background-color: #f9fafb; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 1px 3px rgba(0,0,0,0.1)'">
+                        <div style="display: inline-block; padding: 0.5rem 1rem; background-color: #e0e7ff; color: #3730a3; font-size: 0.9rem; font-weight: 600; border-radius: 9999px; margin-bottom: 0.75rem;">42 Tests</div>
+                        <p style="font-size: 1.1rem; font-weight: 600; color: #1f2937; margin: 0;">SSC</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mock Tests Slider -->
+        <section class="mock-tests" style="margin-bottom: 4rem;">
+            <div class="container">
+                <div class="mock-tests-slider" id="mockTestsSlider" style="overflow: hidden;">
+                    <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
+                        <!-- Slide 1 -->
+                        <div class="slider-slide" style="min-width: 100%; flex-shrink: 0;">
+                            <div class="mock-tests-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                                <!-- First 3 mock test cards go here -->
+                    <!-- Mock Test 1 -->
+                    <div class="course-card" style="border-top: 4px solid #3b82f6;">
+                        <div style="padding: 2rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; transition: color 0.2s ease;">JEE Main Mock Test - Mathematics</h3>
+                                    <p style="color: #6b7280; line-height: 1.6;">Complete mathematics section covering algebra, calculus, and coordinate geometry</p>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 1rem;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                    </svg>
+                                    <span style="font-size: 0.875rem; font-weight: 500; color: #374151;">4.8</span>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                <span style="padding: 0.5rem 0.75rem; background-color: #dbeafe; color: #1e40af; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Mathematics</span>
+                                <span style="padding: 0.5rem 0.75rem; background-color: #fef3c7; color: #92400e; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Advanced</span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">3 hours</div>
+                                    <div style="font-size: 0.75rem; color: #6b7280;">Duration</div>
+                                </div>
+                                <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                        <path d="M4 22h16"/>
+                                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                    </svg>
+                                    <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">90</div>
+                                    <div style="font-size: 0.75rem; color: #6b7280;">Questions</div>
+                                </div>
+                                <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                    <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">15,420</div>
+                                    <div style="font-size: 0.75rem; color: #6b7280;">Taken</div>
+                                </div>
+                            </div>
+
+                            <button style="width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                Start Test
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                    <polyline points="12,5 19,12 12,19"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                                <!-- Mock Test 2 - Physics -->
+                    <div class="course-card" style="border-top: 4px solid #10b981;">
+                        <div style="padding: 2rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div style="flex: 1;">
+                                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; transition: color 0.2s ease;">JEE Advanced Physics - Mechanics</h3>
+                                                <p style="color: #6b7280; line-height: 1.6;">Comprehensive physics test covering mechanics, kinematics, and dynamics</p>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 1rem;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                    </svg>
+                                    <span style="font-size: 0.875rem; font-weight: 500; color: #374151;">4.9</span>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #d1fae5; color: #065f46; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Physics</span>
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #fef3c7; color: #92400e; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Advanced</span>
+                                        </div>
+
+                                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <polyline points="12,6 12,12 16,14"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">2.5 hours</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Duration</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                                    <path d="M4 22h16"/>
+                                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">75</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Questions</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="9" cy="7" r="4"/>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">12,850</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Taken</div>
+                                            </div>
+                                        </div>
+
+                                        <button style="width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                            Start Test
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                                <polyline points="12,5 19,12 12,19"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Mock Test 3 - Chemistry -->
+                                <div class="course-card" style="border-top: 4px solid #8b5cf6;">
+                                    <div style="padding: 2rem;">
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                            <div style="flex: 1;">
+                                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; transition: color 0.2s ease;">NEET Chemistry - Organic Chemistry</h3>
+                                                <p style="color: #6b7280; line-height: 1.6;">Complete organic chemistry test covering reactions, mechanisms, and named reactions</p>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 1rem;">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                                </svg>
+                                                <span style="font-size: 0.875rem; font-weight: 500; color: #374151;">4.7</span>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #ede9fe; color: #5b21b6; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Chemistry</span>
+                                <span style="padding: 0.5rem 0.75rem; background-color: #fef3c7; color: #92400e; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Intermediate</span>
+                            </div>
+
+                                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <polyline points="12,6 12,12 16,14"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">2 hours</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Duration</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                                    <path d="M4 22h16"/>
+                                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">60</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Questions</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="9" cy="7" r="4"/>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">9,750</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Taken</div>
+                                            </div>
+                                        </div>
+
+                                        <button style="width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                            Start Test
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                                <polyline points="12,5 19,12 12,19"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="slider-slide" style="min-width: 100%; flex-shrink: 0;">
+                            <div class="mock-tests-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                                <!-- Mock Test 4 - Biology -->
+                                <div class="course-card" style="border-top: 4px solid #ec4899;">
+                                    <div style="padding: 2rem;">
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                            <div style="flex: 1;">
+                                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; transition: color 0.2s ease;">NEET Biology - Human Physiology</h3>
+                                                <p style="color: #6b7280; line-height: 1.6;">Detailed test on human anatomy, physiology, and biological systems</p>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 1rem;">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                                </svg>
+                                                <span style="font-size: 0.875rem; font-weight: 500; color: #374151;">4.8</span>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #fce7f3; color: #be185d; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Biology</span>
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #fef3c7; color: #92400e; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Advanced</span>
+                                        </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">3 hours</div>
+                                    <div style="font-size: 0.75rem; color: #6b7280;">Duration</div>
+                                </div>
+                                <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                        <path d="M4 22h16"/>
+                                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                    </svg>
+                                    <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">90</div>
+                                    <div style="font-size: 0.75rem; color: #6b7280;">Questions</div>
+                                </div>
+                                <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">11,200</div>
+                                    <div style="font-size: 0.75rem; color: #6b7280;">Taken</div>
+                                </div>
+                            </div>
+
+                                        <button style="width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ec4899, #db2777); color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                            Start Test
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                                <polyline points="12,5 19,12 12,19"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Mock Test 5 - CA Foundation -->
+                                <div class="course-card" style="border-top: 4px solid #f59e0b;">
+                                    <div style="padding: 2rem;">
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                            <div style="flex: 1;">
+                                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; transition: color 0.2s ease;">CA Foundation - Business Mathematics</h3>
+                                                <p style="color: #6b7280; line-height: 1.6;">Complete coverage of business mathematics, statistics, and logical reasoning</p>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 1rem;">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                                </svg>
+                                                <span style="font-size: 0.875rem; font-weight: 500; color: #374151;">4.9</span>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #fef3c7; color: #92400e; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Business Maths</span>
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #e0f2fe; color: #075985; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Intermediate</span>
+                                        </div>
+
+                                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <polyline points="12,6 12,12 16,14"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">2 hours</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Duration</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                                    <path d="M4 22h16"/>
+                                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">100</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Questions</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="9" cy="7" r="4"/>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">8,450</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Taken</div>
+                                            </div>
+                                        </div>
+
+                                        <button style="width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                            Start Test
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                                <polyline points="12,5 19,12 12,19"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Mock Test 6 - Banking -->
+                                <div class="course-card" style="border-top: 4px solid #06b6d4;">
+                                    <div style="padding: 2rem;">
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                            <div style="flex: 1;">
+                                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; transition: color 0.2s ease;">IBPS PO - Quantitative Aptitude</h3>
+                                                <p style="color: #6b7280; line-height: 1.6;">Comprehensive test covering arithmetic, data interpretation, and numerical ability</p>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 1rem;">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                                </svg>
+                                                <span style="font-size: 0.875rem; font-weight: 500; color: #374151;">4.7</span>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #cffafe; color: #155e75; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Banking</span>
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #ddd6fe; color: #5b21b6; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Advanced</span>
+                                        </div>
+
+                                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <polyline points="12,6 12,12 16,14"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">1.5 hours</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Duration</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                                    <path d="M4 22h16"/>
+                                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">50</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Questions</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="9" cy="7" r="4"/>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">14,320</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Taken</div>
+                                            </div>
+                                        </div>
+
+                                        <button style="width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                Start Test
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                    <polyline points="12,5 19,12 12,19"/>
+                                </svg>
+                            </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slider-slide" style="min-width: 100%; flex-shrink: 0;">
+                            <div class="mock-tests-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                                <!-- Mock Test 7 - GATE -->
+                                <div class="course-card" style="border-top: 4px solid #0ea5e9;">
+                                    <div style="padding: 2rem;">
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                            <div style="flex: 1;">
+                                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; transition: color 0.2s ease;">GATE CSE - Data Structures</h3>
+                                                <p style="color: #6b7280; line-height: 1.6;">In-depth coverage of arrays, linked lists, trees, graphs, and algorithms</p>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 1rem;">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                                </svg>
+                                                <span style="font-size: 0.875rem; font-weight: 500; color: #374151;">4.8</span>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #e0f2fe; color: #0369a1; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Computer Science</span>
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #fee2e2; color: #991b1b; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Expert</span>
+                                        </div>
+
+                                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <polyline points="12,6 12,12 16,14"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">3 hours</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Duration</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                                    <path d="M4 22h16"/>
+                                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">65</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Questions</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="9" cy="7" r="4"/>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">7,890</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Taken</div>
+                                            </div>
+                                        </div>
+
+                                        <button style="width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                            Start Test
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                                <polyline points="12,5 19,12 12,19"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Mock Test 8 - SSC -->
+                                <div class="course-card" style="border-top: 4px solid #14b8a6;">
+                                    <div style="padding: 2rem;">
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                            <div style="flex: 1;">
+                                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; transition: color 0.2s ease;">SSC CGL - General Intelligence</h3>
+                                                <p style="color: #6b7280; line-height: 1.6;">Complete coverage of reasoning, verbal ability, and analytical skills</p>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 1rem;">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                                </svg>
+                                                <span style="font-size: 0.875rem; font-weight: 500; color: #374151;">4.6</span>
+                                            </div>
+                                        </div>
+
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #ccfbf1; color: #0f766e; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">General Studies</span>
+                                            <span style="padding: 0.5rem 0.75rem; background-color: #e0f2fe; color: #0369a1; font-size: 0.875rem; font-weight: 500; border-radius: 9999px;">Intermediate</span>
+                                        </div>
+
+                                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <circle cx="12" cy="12" r="10"/>
+                                                    <polyline points="12,6 12,12 16,14"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">2 hours</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Duration</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                                    <path d="M4 22h16"/>
+                                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">80</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Questions</div>
+                                            </div>
+                                            <div style="text-align: center; padding: 0.75rem; background-color: #f9fafb; border-radius: 0.5rem;">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6b7280; margin: 0 auto 0.25rem;">
+                                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                                    <circle cx="9" cy="7" r="4"/>
+                                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                                </svg>
+                                                <div style="font-size: 0.875rem; font-weight: 500; color: #1f2937;">16,750</div>
+                                                <div style="font-size: 0.75rem; color: #6b7280;">Taken</div>
+                                            </div>
+                                        </div>
+
+                                        <button style="width: 100%; display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #14b8a6, #0d9488); color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: all 0.2s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                            Start Test
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                                <polyline points="12,5 19,12 12,19"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Empty card for alignment -->
+                                <div class="course-card" style="visibility: hidden;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Previous Button -->
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <button style="padding: 1rem 2rem; background-color: #1f2937; color: white; font-weight: 500; border: none; border-radius: 0.5rem; transition: background-color 0.2s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#111827'" onmouseout="this.style.backgroundColor='#1f2937'">
+                            Load More Courses
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Update JavaScript for smooth sliding -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const mockTestsSlider = document.getElementById('mockTestsSlider');
+                const sliderTrack = mockTestsSlider.querySelector('.slider-track');
+                const mockTestSlides = mockTestsSlider.querySelectorAll('.slider-slide');
+                let mockTestCurrentSlide = 0;
+                let autoSlideInterval;
+
+                function showMockTestSlide(index) {
+                    mockTestCurrentSlide = index;
+                    sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+                }
+
+                function nextSlide() {
+                    showMockTestSlide((mockTestCurrentSlide + 1) % mockTestSlides.length);
+                }
+
+                function prevSlide() {
+                    showMockTestSlide((mockTestCurrentSlide - 1 + mockTestSlides.length) % mockTestSlides.length);
+                }
+
+                // Start auto-sliding
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(nextSlide, 3000);
+                }
+
+                // Stop auto-sliding
+                function stopAutoSlide() {
+                    clearInterval(autoSlideInterval);
+                }
+
+                // Add click handler for Previous button
+                const prevButton = mockTestsSlider.querySelector('button');
+                prevButton.addEventListener('click', function() {
+                    prevSlide();
+                    // Reset the interval when user clicks
+                    stopAutoSlide();
+                    startAutoSlide();
+                });
+
+                // Pause auto-sliding when user hovers over the slider
+                mockTestsSlider.addEventListener('mouseenter', stopAutoSlide);
+                mockTestsSlider.addEventListener('mouseleave', startAutoSlide);
+
+                // Initialize first slide and start auto-sliding
+                showMockTestSlide(0);
+                startAutoSlide();
+            });
+        </script>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                <path d="M4 22h16"/>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">EduPro Academy</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering students to achieve their dreams through quality education, expert guidance, and comprehensive test preparation.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Instructors</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Popular Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">JEE Main & Advanced</a></li>
+                        <li><a href="#">NEET</a></li>
+                        <li><a href="#">CA Foundation</a></li>
+                        <li><a href="#">GATE</a></li>
+                        <li><a href="#">Banking Exams</a></li>
+                        <li><a href="#">SSC CGL</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Student Support</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-copyright">
+                <p>© 2025 EduPro Academy. All rights reserved. Made with ❤️ for students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sign In to EduPro Academy</h2>
+                <button class="modal-close" onclick="closeSignInModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <form class="modal-form" onsubmit="handleSignIn(event)">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remember">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-modal">Sign In</button>
+                <p class="modal-footer">
+                    Don't have an account? <a href="#" onclick="openSignUpModal()">Sign up here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
